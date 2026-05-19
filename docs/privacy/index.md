@@ -122,6 +122,6 @@ When updates are made, the effective date at the top of this document will be re
 For questions about this Privacy Policy or PillMate, please contact:
 
 **Developer:** Gustavo Salazar  
-**Email:** gustavo.navrro.dev@outlook.com
+**Email:** gustavo.navarro.dev@outlook.com
 
 
