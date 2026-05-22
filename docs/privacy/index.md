@@ -123,5 +123,3 @@ For questions about this Privacy Policy or PillMate, please contact:
 
 **Developer:** Gustavo Salazar  
 **Email:** gustavo.navarro.dev@outlook.com
-
-
