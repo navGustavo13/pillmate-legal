@@ -1,23 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PillMate — Medication Tracker</title>
-  <meta name="description" content="Never miss a dose again. PillMate helps you build a medication routine that actually sticks — with smart reminders, beautiful insights, and your data always private on your device." />
+  <title>PillMate — Suivi de Médicaments</title>
+  <meta name="description" content="Ne manquez plus jamais une dose. PillMate vous aide à construire une routine médicamenteuse qui fonctionne vraiment — avec des rappels intelligents, des insights réels et vos données toujours privées sur votre appareil." />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --accent: #7B7FE8;
-      --bg: #0E0E14;
-      --bg2: #15151F;
-      --card: #1C1C28;
-      --text: #F0F0F8;
-      --muted: #8888A8;
-      --radius: 20px;
-    }
+    :root { --accent: #7B7FE8; --bg: #0E0E14; --card: #1C1C28; --text: #F0F0F8; --muted: #8888A8; --radius: 20px; }
     body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-
     nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; position: sticky; top: 0; background: rgba(14,14,20,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06); z-index: 100; flex-wrap: wrap; gap: 12px; }
     .nav-brand { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; font-weight: 700; text-decoration: none; color: var(--text); }
     .nav-brand .icon { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
@@ -28,7 +19,6 @@
     .lang-switcher { display: flex; gap: 6px; }
     .lang-switcher a { color: var(--muted); text-decoration: none; font-size: 0.8rem; padding: 4px 8px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); transition: all 0.2s; }
     .lang-switcher a:hover, .lang-switcher a.active { color: var(--text); border-color: var(--accent); background: rgba(123,127,232,0.1); }
-
     .hero { text-align: center; padding: 100px 24px 80px; max-width: 760px; margin: 0 auto; }
     .badge { display: inline-block; background: rgba(123,127,232,0.15); color: var(--accent); border: 1px solid rgba(123,127,232,0.3); border-radius: 100px; padding: 6px 16px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 24px; }
     h1 { font-size: clamp(2.4rem, 6vw, 3.8rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 20px; }
@@ -39,7 +29,6 @@
     .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
     .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: var(--card); color: var(--text); text-decoration: none; padding: 14px 28px; border-radius: 14px; font-weight: 600; font-size: 1rem; border: 1px solid rgba(255,255,255,0.08); transition: background 0.2s; }
     .btn-secondary:hover { background: #22222F; }
-
     .section { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
     .section-label { text-align: center; color: var(--accent); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
     .section-title { text-align: center; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 56px; }
@@ -49,17 +38,14 @@
     .feature-icon { font-size: 2rem; margin-bottom: 16px; }
     .feature-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
     .feature-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
-
     .privacy-banner { background: linear-gradient(135deg, rgba(123,127,232,0.12), rgba(123,127,232,0.04)); border: 1px solid rgba(123,127,232,0.2); border-radius: var(--radius); padding: 48px; text-align: center; max-width: 700px; margin: 0 auto 80px; }
     .privacy-banner .icon { font-size: 2.5rem; margin-bottom: 16px; }
     .privacy-banner h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 12px; }
     .privacy-banner p { color: var(--muted); font-size: 1rem; }
-
     footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 40px 24px; text-align: center; color: var(--muted); font-size: 0.85rem; }
     footer .footer-links { display: flex; justify-content: center; gap: 24px; list-style: none; margin-bottom: 16px; flex-wrap: wrap; }
     footer .footer-links a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
     footer .footer-links a:hover { color: var(--text); }
-
     @media (max-width: 600px) { nav { padding: 16px 20px; } .nav-links { display: none; } .privacy-banner { padding: 32px 24px; } }
   </style>
 </head>
@@ -71,59 +57,59 @@
     </a>
     <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="../doc/privacy/">Privacy</a></li>
-        <li><a href="../doc/support/">Support</a></li>
-        <li><a href="../doc/terms/">Terms</a></li>
+        <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+        <li><a href="/pillmate-legal/doc/fr/privacy/">Confidentialité</a></li>
+        <li><a href="/pillmate-legal/doc/fr/support/">Support</a></li>
+        <li><a href="/pillmate-legal/doc/fr/terms/">Conditions</a></li>
       </ul>
       <div class="lang-switcher">
-        <a href="/pillmate-legal/" class="active">EN</a>
+        <a href="/pillmate-legal/">EN</a>
         <a href="/pillmate-legal/es/">ES</a>
-        <a href="/pillmate-legal/fr/">FR</a>
+        <a href="/pillmate-legal/fr/" class="active">FR</a>
         <a href="/pillmate-legal/pt-BR/">PT</a>
       </div>
     </div>
   </nav>
 
   <section class="hero">
-    <div class="badge">Available on the App Store</div>
-    <h1>Your medications,<br /><span>beautifully organized.</span></h1>
-    <p>Never miss a dose again. PillMate helps you build a medication routine that actually sticks — with smart reminders, real insights, and your data always private on your device.</p>
+    <div class="badge">Disponible sur l'App Store</div>
+    <h1>Vos médicaments,<br /><span>magnifiquement organisés.</span></h1>
+    <p>Ne manquez plus jamais une dose. PillMate vous aide à construire une routine médicamenteuse qui fonctionne vraiment — avec des rappels intelligents, des insights réels et vos données toujours privées sur votre appareil.</p>
     <div class="cta-group">
-      <a class="btn-primary" href="https://apps.apple.com/app/pillmate/id000000000" target="_blank">⬇︎ &nbsp;Download on App Store</a>
-      <a class="btn-secondary" href="#features">See features →</a>
+      <a class="btn-primary" href="https://apps.apple.com/app/pillmate/id000000000" target="_blank">⬇︎ &nbsp;Télécharger sur l'App Store</a>
+      <a class="btn-secondary" href="#fonctionnalites">Voir les fonctionnalités →</a>
     </div>
   </section>
 
-  <section class="section" id="features">
-    <p class="section-label">Features</p>
-    <h2 class="section-title">Everything you need,<br />nothing you don't.</h2>
+  <section class="section" id="fonctionnalites">
+    <p class="section-label">Fonctionnalités</p>
+    <h2 class="section-title">Tout ce dont vous avez besoin,<br />rien de superflu.</h2>
     <div class="features-grid">
-      <div class="feature-card"><div class="feature-icon">🔔</div><h3>Smart Reminders</h3><p>Get friendly notifications exactly when it's time to take your medication. Never miss a dose again.</p></div>
-      <div class="feature-card"><div class="feature-icon">⭕️</div><h3>Daily Overview</h3><p>See your progress at a glance with a beautiful circular chart split by Morning, Afternoon, Evening, and Late Night.</p></div>
-      <div class="feature-card"><div class="feature-icon">📊</div><h3>Progress Insights</h3><p>Weekly adherence charts and period breakdowns show your consistency over time. Celebrate your streaks.</p></div>
-      <div class="feature-card"><div class="feature-icon">🟦</div><h3>Home Screen Widget</h3><p>Glance at today's doses without opening the app. Real-time progress right on your Lock Screen or Home Screen.</p></div>
-      <div class="feature-card"><div class="feature-icon">💊</div><h3>All Medication Types</h3><p>Pills, injections, drops, and more — log any medication with custom doses, schedules, and colors.</p></div>
-      <div class="feature-card"><div class="feature-icon">📤</div><h3>Backup & Restore</h3><p>Export your medications and history to transfer between devices or keep a personal backup — your routine travels with you.</p></div>
+      <div class="feature-card"><div class="feature-icon">🔔</div><h3>Rappels intelligents</h3><p>Recevez des notifications au bon moment pour ne jamais oublier de prendre vos médicaments.</p></div>
+      <div class="feature-card"><div class="feature-icon">⭕️</div><h3>Aperçu quotidien</h3><p>Visualisez votre progression avec un graphique circulaire divisé par Matin, Après-midi, Soir et Nuit.</p></div>
+      <div class="feature-card"><div class="feature-icon">📊</div><h3>Statistiques de progrès</h3><p>Des graphiques d'adhérence hebdomadaire et des résumés par période montrent votre constance dans le temps.</p></div>
+      <div class="feature-card"><div class="feature-icon">🟦</div><h3>Widget sur l'écran d'accueil</h3><p>Consultez vos doses du jour sans ouvrir l'app. Progression en temps réel sur votre écran de verrouillage.</p></div>
+      <div class="feature-card"><div class="feature-icon">💊</div><h3>Tous types de médicaments</h3><p>Comprimés, injections, gouttes et plus — enregistrez n'importe quel médicament avec doses et horaires personnalisés.</p></div>
+      <div class="feature-card"><div class="feature-icon">📤</div><h3>Sauvegarde et restauration</h3><p>Exportez vos médicaments et votre historique pour changer d'appareil ou conserver une sauvegarde personnelle.</p></div>
     </div>
   </section>
 
   <div class="section" style="padding-top:0;">
     <div class="privacy-banner">
       <div class="icon">🔒</div>
-      <h2>Private by design.</h2>
-      <p>All your data is stored locally on your device. No accounts, no cloud, no tracking. Just you and your health.</p>
+      <h2>Confidentialité par conception.</h2>
+      <p>Toutes vos données sont stockées localement sur votre appareil. Pas de compte, pas de cloud, pas de suivi. Juste vous et votre santé.</p>
     </div>
   </div>
 
   <footer>
     <ul class="footer-links">
-      <li><a href="doc/privacy/">Privacy Policy</a></li>
-      <li><a href="doc/terms/">Terms of Use</a></li>
-      <li><a href="doc/support/">Support</a></li>
-      <li><a href="doc/medical-disclaimer/">Medical Disclaimer</a></li>
+      <li><a href="/pillmate-legal/doc/fr/privacy/">Politique de confidentialité</a></li>
+      <li><a href="/pillmate-legal/doc/fr/terms/">Conditions d'utilisation</a></li>
+      <li><a href="/pillmate-legal/doc/fr/support/">Support</a></li>
+      <li><a href="/pillmate-legal/doc/fr/medical-disclaimer/">Avertissement médical</a></li>
     </ul>
-    <p>© 2026 PillMate. All rights reserved.</p>
+    <p>© 2026 PillMate. Tous droits réservés.</p>
   </footer>
 </body>
 </html>
