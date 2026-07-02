@@ -1,8 +1,8 @@
 # Acknowledgements
 
-PillMate uses Apple platform technologies including Swift, SwiftUI, SwiftData, and local notifications.
+GentleArc uses Apple platform technologies including Swift, SwiftUI, SwiftData, and local notifications.
 
-PillMate also uses Firebase Crashlytics for crash reporting and diagnostics when enabled.
+GentleArc also uses Firebase Crashlytics for crash reporting and diagnostics when enabled.
 
 Firebase SDK is provided by Google LLC and licensed under the Apache License, Version 2.0.
 
