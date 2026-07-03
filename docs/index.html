@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GentleArc — Medication Tracker</title>
   <meta name="description" content="Never miss a dose again. GentleArc helps you build a medication routine that actually sticks — with smart reminders, beautiful insights, and your data always private on your device." />
+  <link rel="icon" type="image/png" href="/pillmate-legal/assets/icono.png" />
+  <link rel="apple-touch-icon" href="/pillmate-legal/assets/icono.png" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
@@ -20,7 +22,7 @@
 
     nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; position: sticky; top: 0; background: rgba(14,14,20,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06); z-index: 100; flex-wrap: wrap; gap: 12px; }
     .nav-brand { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; font-weight: 700; text-decoration: none; color: var(--text); }
-    .nav-brand .icon { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+    .nav-brand .icon { width: 34px; height: 34px; border-radius: 10px; display: block; object-fit: cover; box-shadow: 0 8px 22px rgba(123,127,232,0.24); }
     .nav-right { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
     .nav-links { display: flex; gap: 24px; list-style: none; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
@@ -66,7 +68,7 @@
 <body>
   <nav>
     <a class="nav-brand" href="/pillmate-legal/">
-      <div class="icon">💊</div>
+      <img class="icon" src="/pillmate-legal/assets/icono.png" alt="GentleArc icon" />
       GentleArc
     </a>
     <div class="nav-right">
